@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
+title: dabo-blogs
+subtitle: 'write something'
+description: '忆往昔,望未来'
+keywords: 生活,感悟
+author: dabo
+language: zh-CN
 timezone: ''
 
 # URL
