@@ -43,7 +43,7 @@ widget_custom:
 # theme styling
 # color: Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet
 theme:
-  color: Default | Mint Green
+  color: Mint Green
   fancybox: true
 
 # ===========================================
