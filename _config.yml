@@ -99,7 +99,9 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 ## theme: landscape
-theme: xoxo
+#theme: sky
+theme: noise
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
