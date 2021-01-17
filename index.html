@@ -1,81 +1,189 @@
-extends base.pug
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>Dabo-Blog</title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
-block title
-  title= config.title + " | " + config.subtitle
+    
+<link rel="stylesheet" href="/css/gitment.css">
 
-block main
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_859455_eaq7v6w8ktj.css">
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <div class="header-title">
 
-    //- Blog title and subtitle
-    header.wrapper.header
-      .container.blog-title
-        a#logo.title(href=url_for('.'))= config.title
-        span.subtitle= config.subtitle
-        label#toggle-menu(for="menu", onclick)
-          i.fa.fa-bars
-      //- use checkbox hack for toggle nav-bar on small screens
-      input#menu(type="checkbox")
-      .container.nav-items
-        each nav, name in theme.menu
-          +a_with_current(nav, __(name))
+        </div>
+        <nav class="header-nav">
+            
+            <a href="/" class="header-nav-link" >
+                首页
+            </a>
+            
 
-    article.wrapper
-      if theme.compact_index
-        .post-entry
-          .post
-            include _partial/postarchive.pug
-      else
-        //- normal index page
+            
+            <a href="/archives" class="header-nav-link">
+                归档
+            </a>
+            
 
-        #index-main.container.entries
-          for post in page.posts.toArray()
-            .post-entry
-              .post-desc
-                .post-title
-                  if post.link
-                      a(href=url_for(post.link),target="_blank", itemprop="url")= post.title
-                  else
-                      a(href=url_for(post.path))= post.title
+            
 
-                .post-content
-                  if post.description
-                    != post.description
-                  else if post.excerpt
-                    != post.excerpt
-                  else if post.content
-                    - var br = post.content.indexOf('</p>')
-                    if br < 0
-                      != post.content
-                    else
-                      != post.content.substring(0, br + 4)
+            
+        </nav>
+    </div>
+</header>
+<header class="mobile-header">
+    <div class="mobile-nav">
+        <div class="mobile-nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-nav-title">
+            <a href="/" class="mobile-nav-title-link">dabo's Blog</a>
+        </div>
 
-                .post-meta
-                  if (post.tags && post.tags.length)
-                    .post-tags
-                      != list_tags(post.tags, {show_count: false, class: 'post-tag', style:'none', separator:''})
-                  .post-time= post.date.format(config.date_format)
+    </div>
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-home"></i>
+                <a href="/" class="mobile-nav-link">首页</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-archive"></i>
+                <a href="/archives" class="mobile-nav-link">归档</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-tag"></i>
+                <a href="/tags" class="mobile-nav-link">标签</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-about"></i>
+                <a href="/about/" class="mobile-nav-link">关于</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="main">
+    <div class="content-inner">
+        <div class="posts">
+    
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2021/01/15/blog-name/">blog name</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2021-01-15</span>
+                
+            </div>
+            <div class="post-content">
+                
+                    
+                
+            </div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2021/01/15/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/">unity导出android &amp;&amp; ios project 小结</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2021-01-15</span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <h3 id="unity-导出-AndoridStudio-工程"><a href="#unity-导出-AndoridStudio-工程" class="headerlink" title="unity 导出 AndoridStudio 工程"></a>unity 导出 AndoridStudio 工程</h3><p>1.每次从unity导出来新的AndroidStudio工程,只有src/main/jniLibs,scr/main/assets/bin目录下的内容不同。 可以直接替换当前AndroidStudio工程内这两个文件夹,以保证其他配置文件不用改变。</p>
+                    <div class="read-more">
+                        <a href="/2021/01/15/%E5%B7%A5%E4%BD%9C%E7%AC%94%E8%AE%B0/" class="read-more-link">
+                            阅读全文
+                            <i class="iconfont icon-readmore"></i>
+                        </a>
+                    </div>
+                
+            </div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2021/01/14/second-blog/">second blog</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2021-01-14</span>
+                
+            </div>
+            <div class="post-content">
+                
+                    <p>test change</p>
+<p>test change2</p>
+<p>test change3</p>
 
-    if !theme.infinite_scroll
-      include _partial/paginator.pug
+                
+            </div>
+        </article>
+    
+        <article class="post-abstract">
+            <div class="post-title">
+                <h2><a class="post-title-link" href="/2021/01/14/my-first-blog/">first</a></h2>
+            </div>
+            <div class="post-meta">
+                <span class="post-time">2021-01-14</span>
+                
+            </div>
+            <div class="post-content">
+                
+                    
+                
+            </div>
+        </article>
+    
+</div>
+<div class="paginator">
+    
+        
+        
+    
+</div>
 
-    footer.footer.wrapper
-      .social
-        +social_icon('email', "mailto:", "fa-envelope-o")
-        +social_icon('twitter', 'https://twitter.com/', 'fa-twitter')
-        +social_icon('weibo', 'https://weibo.com/', 'fa-weibo')
-        +social_icon('github', 'https://github.com/', 'fa-github')
-        +social_icon('googleplus', 'https://plus.google.com/', 'fa-google-plus')
-        +social_icon('rss', "", "fa-rss")
+    </div>
+</div>
+<footer class="footer-social">
+    
 
-      .footer-content
-        - var year = date(new Date(), 'YYYY');
-        = '© ' + year + ' '
-        a(href='/', rel='nofollow')= config.title
-        = '. Powered by '
-        a(rel='nofollow', target='_blank', href='https://hexo.io') Hexo
-        = '. Theme '
-        a(target='_blank', href='https://github.com/lotabout/hexo-theme-noise') noise
-        |.
+    
 
-    if theme.infinite_scroll
-      script(src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js")
-      script(src=root + 'js/noise.js')
+    
+
+    <div class="footer-copyright">
+        <p class="time-line">
+            &copy;
+            
+            
+            2021
+            &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
+            <a target="_blank" href="https://github.com/iJinxin">dabo</a>
+        </p>
+        <p class="theme-info">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
+            <a target="_blank" href="https://github.com/iJinxin/hexo-theme-sky">Sky</a>
+        </p>
+    </div>
+</footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    
+
+</script>
+</html>
