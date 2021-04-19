@@ -29,3 +29,6 @@ tags: unity 物理
 
 ​		OnTriggerEnter，OnTriggerStay, OnTriggerExit.
 
+Rigidbody 属性设置:
+
+​		Is kinematic: 是否动力学。 打开后物体不受物理引擎影响，只受到transform控制。将收不到 OnCollision事件。如果碰撞物体的Collider的 isTrigger打开，依然可以收到OnTrigger事件
