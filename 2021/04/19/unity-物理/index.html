@@ -84,17 +84,17 @@
         </div>
         <div class="post-toc" id="post-toc">
     <strong class="post-toc-title">目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#Unity-%E7%A2%B0%E6%92%9E%E5%99%A8%EF%BC%88Collider%EF%BC%89%E3%80%81%E8%A7%A6%E5%8F%91%E5%99%A8%EF%BC%88Trigger%EF%BC%89%E3%80%81%E5%88%9A%E4%BD%93%EF%BC%88Rigidbody%EF%BC%89%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">Unity 碰撞器（Collider）、触发器（Trigger）、刚体（Rigidbody）之间的关系</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Unity-%E7%A2%B0%E6%92%9E%E5%99%A8%EF%BC%88Collider%EF%BC%89%E3%80%81%E8%A7%A6%E5%8F%91%E5%99%A8%EF%BC%88Trigger%EF%BC%89%E3%80%81%E5%88%9A%E4%BD%93%EF%BC%88Rigidbody%EF%BC%89%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">Unity 碰撞器（Collider）、触发器（Trigger）、刚体（Rigidbody）之间的关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%A9%E4%BD%93%E5%8F%91%E7%94%9F%E7%A2%B0%E6%92%9E%E7%9A%84%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="toc-text">物体发生碰撞的必要条件:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E7%A2%B0%E6%92%9E%E5%8F%91%E7%94%9F%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%892%E7%A7%8D-%E4%B8%80%E7%A7%8D%E6%98%AF%E5%88%A9%E7%94%A8%E7%A2%B0%E6%92%9E%E5%99%A8%EF%BC%8C%E4%B8%80%E7%A7%8D%E6%98%AF%E5%88%A9%E7%94%A8%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-text">检测碰撞发生的方式有2种,一种是利用碰撞器，一种是利用触发器</span></a></li></ol></li></ol></li></ol>
     <div class="back-to-top" id="back-to-top">
         <a href="javascript:void(0);">回到顶部</a>
     </div>
 </div>
         <div class="post-content">
-            <h6 id="Unity-碰撞器（Collider）、触发器（Trigger）、刚体（Rigidbody）之间的关系"><a href="#Unity-碰撞器（Collider）、触发器（Trigger）、刚体（Rigidbody）之间的关系" class="headerlink" title="Unity 碰撞器（Collider）、触发器（Trigger）、刚体（Rigidbody）之间的关系"></a>Unity 碰撞器（Collider）、触发器（Trigger）、刚体（Rigidbody）之间的关系</h6><p>物体之间要产生碰撞必须为GameObject添加碰撞器(Collider)和刚体(Rigidbody)，GameObject只有添加刚体的时候才会收到物理影响。碰撞器是物理组件的一部分，需要同刚体一起添加到GameObject才能触发碰撞事件。GameObject只添加刚体，没有碰撞体，则会穿过彼此。</p>
-<p>物体发生碰撞的必要条件:</p>
-<p>​        2个物体都必须带有Collider，其中1个物体还必须带有Rigidbody.</p>
-<p>检测碰撞发生的方式有2种,一种是利用碰撞器，一种是利用触发器</p>
-<p>​        碰撞器：GameObject 添加的Collider，</p>
+            <h2 id="Unity-碰撞器（Collider）、触发器（Trigger）、刚体（Rigidbody）之间的关系"><a href="#Unity-碰撞器（Collider）、触发器（Trigger）、刚体（Rigidbody）之间的关系" class="headerlink" title="Unity 碰撞器（Collider）、触发器（Trigger）、刚体（Rigidbody）之间的关系"></a>Unity 碰撞器（Collider）、触发器（Trigger）、刚体（Rigidbody）之间的关系</h2><p>物体之间要产生碰撞必须为GameObject添加碰撞器(Collider)和刚体(Rigidbody)，GameObject只有添加刚体的时候才会收到物理影响。碰撞器是物理组件的一部分，需要同刚体一起添加到GameObject才能触发碰撞事件。GameObject只添加刚体，没有碰撞体，则会穿过彼此。</p>
+<a id="more"></a>
+
+<h4 id="物体发生碰撞的必要条件"><a href="#物体发生碰撞的必要条件" class="headerlink" title="物体发生碰撞的必要条件:"></a>物体发生碰撞的必要条件:</h4><p>​        2个物体都必须带有Collider，其中1个物体还必须带有Rigidbody.</p>
+<h4 id="检测碰撞发生的方式有2种-一种是利用碰撞器，一种是利用触发器"><a href="#检测碰撞发生的方式有2种-一种是利用碰撞器，一种是利用触发器" class="headerlink" title="检测碰撞发生的方式有2种,一种是利用碰撞器，一种是利用触发器"></a>检测碰撞发生的方式有2种,一种是利用碰撞器，一种是利用触发器</h4><p>​        碰撞器：GameObject 添加的Collider，</p>
 <p>​        触发器：GameObject 的Collider isTrigger 打开.</p>
 <p>当2个GameObject的Collider isTrigger都未选中的时候，为碰撞器的事件。具体表现为：碰撞之后带有刚体的物体会受物理影响产生撞飞的效果</p>
 <p>​        OnCollisionEnter, OnCollisionStay, OnCollisionExit </p>
