@@ -1,6 +1,6 @@
 ---
 title: 2021-AppStore提审注意事项总结
-date: 2021-04-19 11:11:02
+date: 2021-04-18 11:11:02
 tags: AppStore
 ---
 
@@ -12,9 +12,11 @@ tags: AppStore
 
 --没有崩溃,卡顿的问题
 
+<!-- more-->
+
 3.no broken links wherever it shows
 
---任何显示都没有打断的链接
+--任何显示都没有打断的链接（不太明白）
 
 4.no compatibility issue, (both iPhone & iPad) devices would be supported if possible; (main target device is on sale in AppStore)
 
@@ -28,7 +30,7 @@ tags: AppStore
 
 --确保正确支持设置的最低设备
 
-7. make sure NOT gathering any information about the personal user data
+7.make sure NOT gathering any information about the personal user data
 
 --确保不收集用户的任何个人信息 
 
