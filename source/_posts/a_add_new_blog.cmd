@@ -1,3 +1,3 @@
 cd F:\Blog\dabo-blog  
-hexo new "blog name"
+hexo new "2021 AppStore 提审要求"
 pause
