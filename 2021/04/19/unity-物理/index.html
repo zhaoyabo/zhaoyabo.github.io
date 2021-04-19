@@ -100,6 +100,8 @@
 <p>​        OnCollisionEnter, OnCollisionStay, OnCollisionExit </p>
 <p>其中1个GameObject的Collider isTrigger 选中的时候，物理引擎会被忽略，为触发器事件。具体表现为：2个物体会互相穿过</p>
 <p>​        OnTriggerEnter，OnTriggerStay, OnTriggerExit.</p>
+<p>Rigidbody 属性设置:</p>
+<p>​        Is kinematic: 是否动力学。 打开后物体不受物理引擎影响，只受到transform控制。将收不到 OnCollision事件。如果碰撞物体的Collider的 isTrigger打开，依然可以收到OnTrigger事件</p>
 
         </div>
         
