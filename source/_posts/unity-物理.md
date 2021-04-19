@@ -5,15 +5,17 @@ tags: unity 物理
 
 ---
 
-###### Unity 碰撞器（Collider）、触发器（Trigger）、刚体（Rigidbody）之间的关系
+## Unity 碰撞器（Collider）、触发器（Trigger）、刚体（Rigidbody）之间的关系
 
 物体之间要产生碰撞必须为GameObject添加碰撞器(Collider)和刚体(Rigidbody)，GameObject只有添加刚体的时候才会收到物理影响。碰撞器是物理组件的一部分，需要同刚体一起添加到GameObject才能触发碰撞事件。GameObject只添加刚体，没有碰撞体，则会穿过彼此。
 
-物体发生碰撞的必要条件:
+<!-- more -->
+
+#### 物体发生碰撞的必要条件:
 
 ​		2个物体都必须带有Collider，其中1个物体还必须带有Rigidbody.
 
-检测碰撞发生的方式有2种,一种是利用碰撞器，一种是利用触发器
+#### 检测碰撞发生的方式有2种,一种是利用碰撞器，一种是利用触发器
 
 ​		碰撞器：GameObject 添加的Collider，
 
