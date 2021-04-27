@@ -7,11 +7,19 @@ tags: unity
 
 # unity2018+ 新特性
 
-1.Addressable 与 Assetbundle 的使用对比。参考文章
+1.Addressable 与 Assetbundle 的使用对比。
 
-https://www.jianshu.com/p/8009c16fcab3
+​			参考文章https://www.jianshu.com/p/8009c16fcab3
 
 
+
+Addressable 加载资源是异步的，需要设置回调。
+
+​	Addressables.LoadAssetAsync（url）.Completed += (AsyncOperationHandle<GameObject> obj) =>{
+
+var go = Addressables.InstantiateAsync(url,parent).Result;
+
+}
 
 2.Timeline ,Cinemline 使用教程
 
