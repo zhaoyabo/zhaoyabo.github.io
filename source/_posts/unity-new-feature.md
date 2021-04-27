@@ -9,9 +9,15 @@ tags: unity
 
 1.Addressable 与 Assetbundle 的使用对比。
 
-​			参考文章https://www.jianshu.com/p/8009c16fcab3
+<!--more-->
 
+参考文章
 
+https://www.jianshu.com/p/8009c16fcab3
+
+https://zhuanlan.zhihu.com/p/77600079
+
+https://zhuanlan.zhihu.com/p/82247256
 
 Addressable 加载资源是异步的，需要设置回调。
 
