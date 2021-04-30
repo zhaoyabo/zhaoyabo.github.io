@@ -94,6 +94,7 @@
 <p><a target="_blank" rel="noopener" href="http://coder.beitown.com/archives/1279">http://coder.beitown.com/archives/1279</a></p>
 <a id="more"></a>
 
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/renkai0406/article/details/63800248?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&amp;dist_request_id=1619527371618_58607&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">https://blog.csdn.net/renkai0406/article/details/63800248?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;dist_request_id=1619527371618_58607&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></p>
 <p>1.移动的几种方式：</p>
 <p>​    transform.Translate(Vector3); //移动到目标点，可使用 Time.delta * Vector3.normalized 逐贞 匀速 移动过去，</p>
 <p>transform.position = Vector3;</p>
@@ -108,6 +109,21 @@
 <p>用途:限制某个物体的可移动范围, 比如 老夫子大招捆人,只能在半径范围内移动。</p>
 <p>官方示例:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;public class ExampleClass : MonoBehaviour</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F; Move the object around with the arrow keys but confine it</span><br><span class="line">    &#x2F;&#x2F; to a given radius around a center point.    </span><br><span class="line">    public Vector3 centerPt; &#x2F;&#x2F;中心点位置,类似于老夫子捆人时候灯塔的坐标</span><br><span class="line">    public float radius;    &#x2F;&#x2F;最大移动半径，</span><br><span class="line">    void Update()</span><br><span class="line">    &#123;</span><br><span class="line">    &#x2F;&#x2F;Input.GetAxis(&quot;Horizontal&quot;) 按下 左右方向键的的值。：比如朝着指定方向键方向移动 </span><br><span class="line">        &#x2F;&#x2F; Get the new position for the object.</span><br><span class="line">        Vector3 movement &#x3D; new Vector3(Input.GetAxis(&quot;Horizontal&quot;), 0, Input.GetAxis(&quot;Vertical&quot;));</span><br><span class="line">        Vector3 newPos &#x3D; transform.position + movement;        </span><br><span class="line">        &#x2F;&#x2F; Calculate the distance of the new position from the center point. Keep the direction</span><br><span class="line">        &#x2F;&#x2F; the same but clamp the length to the specified radius.</span><br><span class="line">        Vector3 offset &#x3D; newPos - centerPt;</span><br><span class="line">        transform.position &#x3D; centerPt + Vector3.ClampMagnitude(offset, radius);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>    var v100 = new Vector2(1, 1);
+    var v101 = new Vector2(2, 0);
+    var dotValue = Vector2.Dot(v100, v101);
+    var angle = Vector2.Angle(v100, v101);
+    var dotValue2 = v100.magnitude * v101.magnitude * Mathf.Cos(angle * Mathf.Deg2Rad);
+    var cosValue = dotValue / (v100.magnitude * v101.magnitude);
+    var angleByCosValue = Mathf.Acos(cosValue) * Mathf.Rad2Deg;
+    Debug.Log(&quot; angle by cos value  : &quot; + angleByCosValue);
+    Debug.Log(&quot; v1 v2 之间的cos 值 ：&quot; + cosValue + &quot;  &quot; + Mathf.Cos(angle * Mathf.Deg2Rad));
+    Debug.Log(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Vector.Dot : &quot; + dotValue + &quot; angle : &quot; + angle + &quot; dotValue2: &quot; + dotValue2);</code></pre>
+
         </div>
         
         <div class="post-tag">
