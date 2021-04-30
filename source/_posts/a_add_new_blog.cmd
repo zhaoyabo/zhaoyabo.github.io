@@ -1,3 +1,3 @@
 cd F:\Blog\dabo-blog  
-hexo new "unity new feature"
+hexo new "unity NevMeshAgent"
 pause
